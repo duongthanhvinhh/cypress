@@ -41,7 +41,12 @@ Cypress Assertions
 1, Implicit Assertions
       should
       and
+        eq
+        contain
+        exist
+        have.length
+        etc...
 2, Explicit Assertions
-      expect
-      assert 
+      expect - BDD
+      assert - TDD
       

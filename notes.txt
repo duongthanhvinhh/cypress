@@ -1,0 +1,47 @@
+describe('suite name', () =>
+{
+  it('test1', () => {
+    expect(true).to.equal(true)
+  })
+}
+)
+
+//The same as below:
+describe('suite name', function()
+{
+  it('test1', () => {
+    expect(true).to.equal(true)
+  })
+}
+)
+
+
+*******************Locators******************
+CSS selector
+XPath
+cy.get(Locator)
+
+
+CSS Selector
+=============================================
+tag id
+tag class
+tag attribute
+tag class attribute 
+
+ex:
+tag#id
+tag.class
+tag[attribute='value']
+tag.class[attribute='value']
+
+
+Cypress Assertions
+=============================================
+1, Implicit Assertions
+      should
+      and
+2, Explicit Assertions
+      expect
+      assert 
+      

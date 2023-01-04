@@ -41,6 +41,18 @@ describe('Assertions demo',() => {
         cy.get("input[placeholder='Password']").type("admin123")
         cy.get("button[type='submit']").click()
 
-        let expName='abc';
+        let expName='Dashboard';
+
+        cy.get('.oxd-topbar-header-breadcrumb > .oxd-text').then( (x)=>{
+
+            let actName = x.text() 
+
+            //BDD style
+            expect(actName).to.equal(expName)
+
+            //TDD style
+            assert.equal(actName,expName)
+
+        })
     })
 })

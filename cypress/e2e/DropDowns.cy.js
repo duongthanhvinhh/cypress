@@ -50,7 +50,7 @@ describe('handle dropdowns',()=>{
             if ($el.text() === 'cypress automation tutorial') {
                 cy.wrap($el).click()
               }
-            cy.get("input[name='q']").should('have.value','cypress automation tutorial')
+            cy.get("input[name='q']").should('have.value','cypress automation tutorial') //-----> Actually not working at present, need to investigate ??
 
         })
     })

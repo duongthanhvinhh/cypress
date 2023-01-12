@@ -17,10 +17,16 @@ describe("Handling Tables",(()=>{
 
     it('Check Number Rows & Columns',()=>{
 
-        
+        cy.get("table[class='table table-bordered table-hover']>tbody>tr").should('have.length','10'); //Verify total of Rows is 10
+
+        cy.get("table[class='table table-bordered table-hover']>thead>tr>td").should('have.length','7'); //Verify total of Columns is 7
+
     })
 
     it('Check cell data from specific Row & Column',()=>{
+
+        cy.get("table[class='table table-bordered table-hover']>tbody>tr:nth-child(5)>td:nth-child(3)")
+        .contains('princytrainings4@gmail.com');
         
     })
 

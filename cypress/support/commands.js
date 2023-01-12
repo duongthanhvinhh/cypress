@@ -27,3 +27,13 @@
 /// <reference types="Cypress" />
 
 /// <reference types="cypress-xpath" />
+
+
+
+//Define a command to get an Iframe here with an parameter 'iframe'
+Cypress.Commands.add('getIframe', (iframe)=>{
+    return cy.get(iframe)
+    .its('0.contentDocument.body')
+    .should('be.visible')
+    .then(cy.wrap);
+})

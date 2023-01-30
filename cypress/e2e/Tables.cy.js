@@ -30,8 +30,19 @@ describe("Handling Tables",(()=>{
         
     })
 
-    it('Read all the rows & columns data in the first page',()=>{
+    it.only('Read all the rows & columns data in the first page',()=>{
         
+        cy.get("table[class='table table-bordered table-hover']>tbody>tr")  //capture all the rows
+            .each(($row, index, $rows)=>{
+
+                //access to one row
+                cy.wrap($row).within(()=>{
+                
+                    cy.get("td").each(($col, index, $cols)=>{ //get all the td within row
+                        cy.log($col.text());  //extract the data
+                    })
+                })
+            })
     })
 
     it('Pagination',()=>{
